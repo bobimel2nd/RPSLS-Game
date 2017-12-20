@@ -9,15 +9,25 @@
 
   <!-- Font Awesome CSS Icons (For cool glyphicons) -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./assets/popup.css">
 
   <!-- jQuery JS -->
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
   <!-- Code to the JavaScript File -->
   <script src="./assets/RPSLS.js"></script>
+  <script type="text/javascript" src="./assets/popup.js"></script>
 
   <!-- Style to fix the issue of text extending past panel length -->
   <style>
+    body {
+        background-image: url("./assets/straws.png");
+        background-repeat: repeat;
+        background-color: #cccccc;
+        font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+        font-size: 16px;
+        color: black;
+    }
     .panel-body a {
       word-break: break-all;
     }
@@ -29,7 +39,12 @@
     <!-- Jumbotron for Title -->
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h3 class="text-center"><strong><i class="fa"></i>Rock-Paper-Scissor-Lizard-Spock<br>Game</strong></h3>
+        <h3 class="text-center">
+          <strong>Rock-Paper-Scissor-Lizard-Spock<br>Game&nbsp;&nbsp;&nbsp;
+          <i id="helpShort" class="fa fa-info-circle" aria-hidden="true"></i>
+          <i id="helpLong" class="fa fa-question-circle" aria-hidden="true"></i>
+          </strong>
+        </h3>
       </div>
     </div>
     <!-- This row will handle all of the retrieved Data -->
@@ -112,6 +127,13 @@
       <div class="panel-heading text-center">
         <div style="font-size: 8px">© Copyright 2017 - Bob Imel II</div>
       </div>
+    </div>
+  </div>
+  <!-- Pop up window for Detailed Information -->
+  <div class="popup" data-popup="moviePopup">
+    <div class="popup-inner">
+      <iframe id="popup-video" width="560" height="315" src="#" frameborder="0" gesture="media" allow="encrypted-media"></iframe>
+      <a class="popup-close" data-popup-close="moviePopup" href="#">x</a>
     </div>
   </div>
 </body>

@@ -1,16 +1,16 @@
 $(document).ready(function() {
 	// Initialize Objects
-	var RPSLS = ["Spock", "Scissors", "Paper", "Rock", "Lizard"];
-	var Rules = [	{"Key": "01", "Act": "Smashes" },
-					{"Key": "12", "Act": "Cuts" },
-					{"Key": "23", "Act": "Covers" },
-					{"Key": "34", "Act": "Crushes" },
-					{"Key": "40", "Act": "Poisons" },
-					{"Key": "03", "Act": "Vaporizes" },
-					{"Key": "31", "Act": "Crushes" },
-					{"Key": "14", "Act": "Decapitate" },
-					{"Key": "42", "Act": "Eats" },
-					{"Key": "20", "Act": "Disproves" }	];
+	var RPSLS = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
+	var Rules = [	{"Key": "10", "Act": "Covers" },
+					{"Key": "02", "Act": "Breaks" },
+					{"Key": "03", "Act": "Crushes" },
+					{"Key": "40", "Act": "Vaporizes" },
+					{"Key": "21", "Act": "Cuts" },
+					{"Key": "31", "Act": "Eats" },
+					{"Key": "14", "Act": "Disproves" },
+					{"Key": "23", "Act": "Decapitates" },
+					{"Key": "42", "Act": "Smashes" },
+					{"Key": "34", "Act": "Poisons" }	];
 
 	var StepNum = 0;
 	var StepTimer;
@@ -77,6 +77,13 @@ $(document).ready(function() {
 	}, function(errorObject) {
 		alert("The read failed: " + errorObject.code);
 	});
+
+	$("#helpLong").on("click", function() {
+		DataPopupOpen("moviePopup","https://www.youtube.com/embed/x5Q6-wMx-K8");
+	})
+	$("#helpShort").on("click", function() {
+		DataPopupOpen("moviePopup","https://www.youtube.com/embed/iapcKVn7DdY");;
+	})
 
 	// Remove Players from Firebase
     $(window).on('beforeunload', function() {
