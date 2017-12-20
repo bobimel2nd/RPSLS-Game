@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RPSLS Game</title>
+
+  <!-- Bootswatch Styling for Improving the Aesthetics -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+
+  <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- jQuery JS -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+  <!-- Code to the JavaScript File -->
+  <script src="./assets/RPSLS.js"></script>
+
+  <!-- Style to fix the issue of text extending past panel length -->
+  <style>
+    .panel-body a {
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <!-- Main Bootstrap Search -->
+  <div class="container">
+    <!-- Jumbotron for Title -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="text-center"><strong><i class="fa"></i>Rock-Paper-Scissor-Lizard-Spock<br>Game</strong></h3>
+      </div>
+    </div>
+    <!-- This row will handle all of the retrieved Data -->
+    <div class="row"><strong>
+      <div class="col-sm-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title text-center"><i id="Player0Name" class="fa">Player 1</i></h3>
+          </div>
+          <div class="panel-body text-center" id="Player0Choices">
+            <div class="row Plays">&nbsp;</div>
+            <div class="row Plays">&nbsp;</div>
+            <div class="row Plays">&nbsp;</div>
+            <div class="row Plays">&nbsp;</div>
+            <div class="row Plays">&nbsp;</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading text-center">
+            <h3 class="panel-title text-center"><i class="fa"></i>Results</h3>
+          </div>
+          <div class="panel-body text-center" id="Results">
+            <div class="row Results">&nbsp;</div>
+            <div class="row Results">&nbsp;</div>
+            <div class="row Results">&nbsp;</div>
+            <div class="row Results">&nbsp;</div>
+            <div class="row Results">&nbsp;</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading text-center">
+            <h3 class="panel-title text-center"><i id="Player1Name" class="fa">Player 2</i></h3>
+          </div>
+          <div class="panel-body text-center" id="Player1Choices">
+            <div class="row Plays">&nbsp;</div>
+            <div class="row Plays">&nbsp;</div>
+            <div class="row Plays">&nbsp;</div>
+            <div class="row Plays">&nbsp;</div>
+            <div class="row Plays">&nbsp;</div>
+          </div>
+        </div>
+      </strong></div>
+    </div>
+
+    <div class="row">
+      <div id="PlayerEntry" class="col-sm-offset-3 col-sm-6">
+        <input type="text" class="form-control" id="PlayerName" placeholder="Enter Your Name Here to Play">
+      </div>
+    </div>
+    <div class="row">&nbsp;</div>
+
+    <!-- Row for Data Entry -->
+    <div class="row" id="InstantMessage">
+      <div class="col-sm-offset-2 col-sm-8">
+        <div class="panel panel-primary">
+          <div class="panel-heading text-center">
+            <h3 class="panel-title"><strong><i class="fa"></i>Instant Messaging</strong></h3>
+          </div>
+           <div class="panel-body text-left" id="Msgs">
+            <div class="row Msgs">&nbsp;</div>
+            <div class="row Msgs">&nbsp;</div>
+            <div class="row Msgs">&nbsp;</div>
+            <div class="row Msgs">&nbsp;</div>
+            <div class="row Msgs">&nbsp;</div>
+            <div class="row"></div>
+            <div class="row">
+              Msg: <input type="text" id="MsgEntry" style="width: 90%" placeholder="Enter Instant Message Here">
+            </div>
+          </div>
+         </div>
+      </div>
+    </div>
+    <!-- Footer Region -->
+    <div class="row">
+    <div class="panel panel-primary">
+      <div class="panel-heading text-center">
+        <div style="font-size: 8px">© Copyright 2017 - Bob Imel II</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
